@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ni25jn6m2m3s"]
+
+[ext_resource type="Texture2D" uid="uid://cre04hpki1b05" path="res://Tilesheet/monochrome-transparent_packed.png" id="1_2euxw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a714h"]
+atlas = ExtResource("1_2euxw")
+region = Rect2(416, 128, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_epypp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a714h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bat enemy" type="Node2D"]
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PathFollow2D"]
+position = Vector2(-26, -10)
+sprite_frames = SubResource("SpriteFrames_epypp")
+frame_progress = 0.588385

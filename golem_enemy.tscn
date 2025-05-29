@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfdanpcbm5cjv"]
+
+[ext_resource type="Texture2D" uid="uid://dc5v7mf2drj1q" path="res://Tilesheet/monochrome-transparent.png" id="1_nh0go"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wies"]
+atlas = ExtResource("1_nh0go")
+region = Rect2(510, 102, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lacwn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wies")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Golem_enemy" type="Node2D"]
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PathFollow2D"]
+sprite_frames = SubResource("SpriteFrames_lacwn")

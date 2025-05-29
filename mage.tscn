@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsbfhgpypv3ts"]
+
+[ext_resource type="Texture2D" uid="uid://dc5v7mf2drj1q" path="res://Tilesheet/monochrome-transparent.png" id="1_l3qxt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpqcm"]
+atlas = ExtResource("1_l3qxt")
+region = Rect2(646, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7py2t"]
+atlas = ExtResource("1_l3qxt")
+region = Rect2(408, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhb68"]
+atlas = ExtResource("1_l3qxt")
+region = Rect2(408, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x77xd"]
+atlas = ExtResource("1_l3qxt")
+region = Rect2(408, 34, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xj6cx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpqcm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7py2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhb68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x77xd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Mage" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xj6cx")
